@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    min-height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    background-color: hsl(233, 47%, 7%);
+    color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .4s ease-in-out;
+}
+
+
+.card{
+    width: 95%;
+    max-width: 1110px;
+    height: 446px;
+    display: flex;
+    background: hsl(244, 38%, 16%);
+    border-radius: 10px;
+}
+
+.card-img {
+    width: 110%;
+    background-image: url(images/image-header-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    border-radius: 0 10px 10px 0;
+}
+
+.img-mask{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(73, 0, 122);
+    filter: (200%);
+    border-radius: 0 10px 10px 0;
+    opacity: 0.5;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+    padding:  65px 73px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    order: -1;
+}
+
+.card-info-header{
+    font-family: "Inter",sans-serif;
+    font-size: 36px;
+    margin-top: 5px;
+}
+
+.card-info-header span{
+    color: rgb(174, 43, 226);
+}
+
+.card-info-contant{
+    max-width: 370px;
+    font-family: "Inter",sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-top: 28px;
+    line-height: 24px;
+   word-spacing: 0.8px;
+}
+
+.card-info-list{
+    width: 100%;
+    display: flex;
+    padding: 0 0px;
+    justify-content: space-between;
+}
+
+.card-info-list h2{
+
+margin-bottom: 5px;
+}
+
+.card-info-list p{
+    font-size: 12px;
+  font-weight: 300;
+  color: hsla(0, 0%, 100%, 0.75);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.last{
+    padding-right: 75px;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        height: 100%;
+        min-height: 956px;
+    }
+
+    .container {
+        max-width: none;
+        height: 100%;
+        min-height: 956px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: none;
+        height: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .card-img {
+        width: 100%;
+        height: 300px;
+        flex-shrink: 0;
+        background-image: url(images/image-header-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px 10px 0 0;
+}
+
+.card-info-list{
+    height: 240px;
+    margin-top: 1.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+}
